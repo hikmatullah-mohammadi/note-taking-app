@@ -1,0 +1,321 @@
+$bg-color-normal: rgb(80, 77, 224);
+$bg-color-hover: rgb(147, 147, 231);
+$bg-color-dark: rgb(0,0,200);
+$golden-light: rgba(255, 251, 0, 0.459);
+$green-light:rgb(105, 236, 155);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.btn {
+  background-color: $bg-color-normal;
+  padding: 5px;
+  font-family: serif;
+  font-size: 1.2em;
+  border: red 1px groove;
+  border-radius: 5px;
+  &:hover {
+    background-color: $bg-color-hover;
+  }
+}
+body {
+  background-color: $green-light;
+  header {
+    color: white;
+    text-shadow: 3px 3px 2px red;
+    display: grid;
+    place-items: center;
+    background-color: $bg-color-dark;
+    position: fixed;
+    inset: 0 0 auto 0;
+    height: 12vh;
+  }
+  .btn-toggle-menu {
+    position: fixed;
+    z-index: 2;
+    color: white;
+    font-size: 25px;
+    margin-top: -22px;
+  }
+  .active {
+    background-color: rgb(15, 15, 124) !important;
+    font-weight: bold;
+  }
+  .navbar {
+    position: fixed;
+    list-style-type: none;
+    background-color: $bg-color-dark;
+    opacity: 0.9;
+    width: 15%;
+    height: 100%;
+    animation: 100ms toggleMenu;
+    .navlink {
+      height: 35px;
+      margin: 1px;
+      button {
+        text-align: left;
+        background-color: transparent;
+        padding: 10px;
+        width: 100%;
+        color: white;
+        border: none;
+        border-bottom: solid white 1px;
+        &:hover {
+          background-color: blue;
+        }
+      }
+      &:first-child {
+        button {
+          border-top: solid white 1px;
+        }
+      }
+    }
+  }
+  main {
+    margin: 12vh 5% 50px 5%;
+    h1 {
+      text-align: center;
+      padding: 20px;
+      border: red 1px solid;
+      margin: 5px 5%;
+      background-color: $bg-color-normal;
+      font-style: italic;
+      font-family: Cambria, Cochin, Georgia, "Times New Roman", serif;
+    }
+    input[type='search'] {
+      height: 40px;
+      width: 80%;
+      border: 2px blue solid;
+      border-radius: 5px;
+      transition: width 200ms;
+      background-color: $green-light;
+      font-size: 16px;
+      &:focus {
+        width: 100%;
+        font-weight: bold;
+      }
+    }
+    .add-new #addNew-form {
+      padding: 15px;
+      margin: 5px 5%;
+      border: red 1px groove;
+      border-radius: 5px;
+      #newTitle {
+        background-color: $green-light;
+        width: 100%;
+        outline: none;
+        border: blue 1px solid;
+        border-radius: 5px;
+        height: 25px;
+        font-weight: bold;
+        font-family: serif;
+        font-size: 16px;
+      }
+      textarea {
+        @extend #newTitle;
+        background-color: $green-light;
+        height: 100px;
+        font-size: 16px;
+        resize: vertical;
+        font-weight: normal;
+      }
+      .submit-btn {
+        margin-left: 70%;
+        width: 30%;
+      }
+    }
+    .all-notes, .search-matches, .favorites {
+      height: 80vh;
+      width: 95%;
+      overflow: auto;
+    }
+    
+    .note {
+      display: grid;
+      grid-template-rows: 30px 100px 30px;
+      grid-template-columns: 60% 30% 10%;
+      border: solid 1px red;
+      margin: 10px 5%;
+      * {
+        padding: 5px;
+      }
+      .note-title {
+        grid-column: 1/3;
+        grid-row: 1/2;
+        background-color: $golden-light;
+        font-weight: bold;
+        border-radius: 10px;
+      }
+      .favorite-icon {
+        grid-column: 3/4;
+        grid-row: 1/2;
+        text-shadow: 0px 0px 5px red;
+        & i:hover {
+          cursor: pointer;
+        }
+      }
+      .note-body {
+        background-color: $golden-light;
+        grid-column: 1/4;
+        grid-row: 2/3;
+        border: solid 1px white;
+        border-radius: 5px;
+        margin: 2px;
+        resize: none;
+      }
+      .note-date {
+        grid-column: 1/2;
+        grid-row: 3/4;
+        font-size: 12px;
+        padding: 1px 0 0 5px;
+      }
+      .control-btns {
+        grid-column: 2/4;
+        grid-row: 3/4;
+        padding: 0;
+        .control-btn {
+          padding: 1px;
+          width: 50%;
+        }
+      }
+    }
+    .home-page {
+      width: 100%;
+      text-align: center;
+      .home-image {
+        margin-top: 30px;
+        width: 50%;
+        border-radius: 50px;
+        box-shadow: 0px -20px 20px red;
+      }
+      .desc {
+        margin: 10px 15%;
+        width: 70%;
+        font-family: 'Bradley Hand ITC';
+        font-weight: bold;
+        font-size: 30px;
+        color: red;
+      }
+      hr {
+        width: 80%;
+        margin-left: 10%;
+      }
+      .info {
+        margin-top: 25px;
+        .num-notes {
+          color: red;
+          margin: 0;
+          font-weight: bold;
+        }
+        .num-fav-notes {
+          @extend .num-notes;
+          color: gold;
+          background-color: black;
+          padding: 10px;
+          border-radius: 5px;
+        }
+      }
+    }
+    h2.alt-message {
+      text-align: center;
+      color: red;
+      margin-top: 30px;
+    }
+  }
+
+  footer {
+    display: grid;
+    place-items: center;
+    background-color: $bg-color-dark;
+    position: fixed;
+    inset: auto 0 0 0;
+    height: 7vh;
+    a {
+      color: white;
+      text-shadow: 3px 3px 2px red;
+      text-decoration: none;
+      font-size: 1.5em;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  body main {
+    h1,
+    #addNew-form,
+    .note {
+      width: 95%;
+      margin: auto 2.5%;
+      font-size: 0.75em;
+    }
+    .note {
+      .control-btns {
+        * {
+          padding: 5px;
+        }
+      }
+    }
+  }
+}
+@keyframes toggleMenu {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 15%;
+  }
+}
+
+// responsiveness
+@media (max-width: 768px){
+  body {
+    .navbar {
+      width: 25%;
+    }
+    .note .control-btns{
+          font-size: 0.80em;
+    }
+    main{
+      .home-page {
+        .home-image {
+          margin-top: 50px;
+          width: 80%;
+        }
+        .desc {
+          margin: 10px 5%;
+          width: 90%;
+          font-size: 25px;
+        }
+        hr {
+          width: 90%;
+          margin-left: 5%;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 480px){
+  body {
+    .navbar{
+      width: 100%;
+      .navlink button {
+        text-align: center
+      }
+    }
+    main {
+      margin: 12vh 1% 50px 1%;
+      .home-page {
+        .home-image {
+          margin-top: 100px;
+          width: 90%;
+        }
+        .desc {
+         font-size: 20px;
+        }
+      }
+    }
+  }
+}
