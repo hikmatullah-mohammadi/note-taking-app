@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/note-taking-app/static/js/main.9388ea99.js",
+    "static/js/787.cfd8f164.chunk.js": "/note-taking-app/static/js/787.cfd8f164.chunk.js",
+    "index.html": "/note-taking-app/index.html",
+    "main.9388ea99.js.map": "/note-taking-app/static/js/main.9388ea99.js.map",
+    "787.cfd8f164.chunk.js.map": "/note-taking-app/static/js/787.cfd8f164.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.9388ea99.js"
+  ]
+}
