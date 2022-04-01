@@ -1,16 +1,17 @@
 # Note Taking App
-*A web based note taking app!( to practice react )*
+*A web based note taking app!( built in React )*
 
 ---
 
 ### Technologies used:
+<p>
 <img src='https://img.icons8.com/color/96/000000/html-5--v1.png' alt='HTML' width='50px'/>
 <img src='https://img.icons8.com/color/96/000000/css3.png' alt='CSS' width='50px'/>
 <img src='https://img.icons8.com/color/96/000000/javascript--v1.png' alt='JS' width='50px'/>
 <img src='https://img.icons8.com/color/96/000000/sass.png' alt='SASS' width='50px'/>
 <img src='https://img.icons8.com/officel/80/000000/react.png' alt='React' width='50px'/>
 <img src='https://img.icons8.com/color/96/000000/redux.png' alt='Redux' width='50px'/>
-
+</p>
 ---
 
 ##### Tested via:
@@ -37,8 +38,8 @@
 ---
 
 ### Shots
-<img alt='Home' src='./public/images/scr-shot-home.jpg' style='width: 90%; margin-left: 5%'/><br>
-<img alt='All Notes' src='./public/images/scr-shot-all-notes.jpg' style='width: 80%; margin-left: 10%'/>
+<img alt='Home' src='https://github.com/hikmatullah-mohammadi/note-taking-app/raw/main/public/images/scr-shot-home.JPG' width='100%'/><br>
+<img alt='All Notes' src='https://github.com/hikmatullah-mohammadi/note-taking-app/raw/main/public/images/scr-shot-all-notes.JPG' width='50%'/>
 
 ---
 
