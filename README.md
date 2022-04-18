@@ -3,6 +3,8 @@
 
 ---
 
+*Built using `create-react-app`. In case you want to practice, clone it, and use `npm install` command to install all the dependencies, and then enter `npm start` in the command line prompt in your machine to run the app.*
+
 ### Technologies used:
 <p>
 <img src='https://img.icons8.com/color/96/000000/html-5--v1.png' alt='HTML' width='50px'/>
@@ -17,7 +19,7 @@
 ##### Tested via:
 * jest (unit test)
 * Redux devtools
-
+*To run the test cases, use `npm test` command*
 ---
 
 ### You can
