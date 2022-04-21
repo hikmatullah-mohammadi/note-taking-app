@@ -297,19 +297,6 @@ body footer a {
   font-size: 1.5em;
 }
 
-@media (max-width: 480px) {
-  body main h1,
-  body main #addNew-form,
-  body main .note {
-    width: 95%;
-    margin: auto 2.5%;
-    font-size: 0.75em;
-  }
-  body main .note .control-btns * {
-    padding: 5px;
-  }
-}
-
 @-webkit-keyframes toggleMenu {
   from {
     width: 0%;
@@ -366,6 +353,25 @@ body footer a {
   }
   body main .home-page .desc {
     font-size: 20px;
+  }
+  body main h1,
+  body main #addNew-form,
+  body main .note {
+    width: 95%;
+    margin: auto 2.5%;
+    font-size: 0.75em;
+  }
+  body main h1 .control-btns *,
+  body main #addNew-form .control-btns *,
+  body main .note .control-btns * {
+    padding: 5px;
+  }
+<<<<<<< HEAD
+  body footer a {
+=======
+  body .footer a {
+>>>>>>> 257127209bbdee0edb4f3ed58da8f7dfb5042678
+    font-size: .9em;
   }
 }
 /*# sourceMappingURL=index.css.map */

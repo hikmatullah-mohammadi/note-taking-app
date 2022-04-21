@@ -242,24 +242,6 @@ body {
   }
 }
 
-@media (max-width: 480px) {
-  body main {
-    h1,
-    #addNew-form,
-    .note {
-      width: 95%;
-      margin: auto 2.5%;
-      font-size: 0.75em;
-    }
-    .note {
-      .control-btns {
-        * {
-          padding: 5px;
-        }
-      }
-    }
-  }
-}
 @keyframes toggleMenu {
   from {
     width: 0%;
@@ -276,7 +258,7 @@ body {
       width: 25%;
     }
     .note .control-btns{
-          font-size: 0.80em;
+      font-size: 0.80em;
     }
     main{
       .home-page {
@@ -297,6 +279,7 @@ body {
     }
   }
 }
+
 @media (max-width: 480px){
   body {
     .navbar{
@@ -313,8 +296,25 @@ body {
           width: 90%;
         }
         .desc {
-         font-size: 20px;
+          font-size: 20px;
         }
+      }
+      h1,
+      #addNew-form,
+      .note {
+        width: 95%;
+        margin: auto 2.5%;
+        font-size: 0.75em;
+        .control-btns {
+          * {
+            padding: 5px;
+          }
+        }
+      }
+    }
+    footer {
+      a {
+        font-size: 12px;
       }
     }
   }
